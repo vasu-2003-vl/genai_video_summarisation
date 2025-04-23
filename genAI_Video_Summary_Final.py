@@ -41,12 +41,12 @@ def extract_frames(video_path, interval_seconds=5):
   for file in os.listdir(frames_directory):
     os.remove(os.path.join(frames_directory, files))
 
- vidoes = cv2.VideoCapture(video_path)
- fps = int(video.get(cv2.CAP_PROP_FPS))
- frames_count = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
-
- current_frame = 0
- frame_number = 1
+   vidoes = cv2.VideoCapture(video_path)
+   fps = int(video.get(cv2.CAP_PROP_FPS))
+   frames_count = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
+  
+   current_frame = 0
+   frame_number = 1
 
  while current_frame <= frames_count:
    video.set(cv2.CAP_PROP_POS_FRAMES, current_frame)
