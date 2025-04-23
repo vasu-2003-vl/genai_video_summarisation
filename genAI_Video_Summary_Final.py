@@ -48,12 +48,12 @@ def extract_frames(video_path, interval_seconds=5):
   current_frame = 0
   frame_number = 1
 
- while current_frame <= frames_count:
-   video.set(cv2.CAP_PROP_POS_FRAMES, current_frame)
-   success, frame = video.read()
-   if not success:
-     current_frame += fps * interval_seconds
-     continue
+  while current_frame <= frames_count:
+     video.set(cv2.CAP_PROP_POS_FRAMES, current_frame)
+     success, frame = video.read()
+     if not success:
+       current_frame += fps * interval_seconds
+       continue
 
   frame_path = os.path.join(frames_directory, f"frame_{frame_number:03d}.jpg")
   cv2.imwrite(frame_path, frame)
