@@ -79,7 +79,7 @@ def turn_into_story(summary):
   return model.invoke(prompt)
 
 st.title("AjithAI - YouTube/Uploaded Video Summarizer Using Groq LLM")
-st.image("AjithAI_Transperent")
+st.image("AjithAI_Transperent.jpg")
 
 youtube_url = st.text_input("Paste a YouTube video URL:", placeholder="https://www.youtube.com/watch?v=example")
 
