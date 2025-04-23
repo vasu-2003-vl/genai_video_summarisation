@@ -60,7 +60,7 @@ def extract_frames(video_path, interval_seconds=5):
   current_frame += fps * interval_seconds
   frame_number += 1
   
-video.release()
+  video.release()
 
 def describe_video():
   descriptions = []
